@@ -1,4 +1,4 @@
-/*!
+/*/*/*/*!
 
 =========================================================
 * Argon Dashboard - v1.1.0
@@ -191,14 +191,14 @@ sup {
 }
 
 a {
-  color: #5e72e4;
+  color: #800000;
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
-  color: #233dd2;
+  color: #cb4154;
   text-decoration: none;
 }
 
@@ -2519,15 +2519,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #5e72e4;
+  color: #ffd700;
+  background-color: #800000;
   border-color: #5e72e4;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #5e72e4;
+  color: #800000;
+  background-color: #ffd700;
   border-color: #5e72e4;
 }
 
@@ -6830,8 +6830,9 @@ button.bg-primary:focus {
   background-color: #324cdd !important;
 }
 
+/*FORM*/
 .bg-secondary {
-  background-color: #f7fafc !important;
+  background-color: #eae0c8 /*#f7fafc*/ !important;
 }
 
 a.bg-secondary:hover,
@@ -6907,8 +6908,9 @@ button.bg-dark:focus {
   background-color: #0a0c0d !important;
 }
 
+/*LOWER COLOR*/
 .bg-default {
-  background-color: #172b4d !important;
+  background-color: #b22222 /*#172b4d*/ !important;
 }
 
 a.bg-default:hover,
@@ -13050,6 +13052,15 @@ button.bg-darker:focus {
   color: #fff !important;
 }
 
+.text-maroonlight {
+  color: #cb4154 !important;
+}
+
+a.text-maroonlight:hover,
+a.text-maroonlight:focus {
+  color: #cf1020 !important;
+}
+
 .text-primary {
   color: #5e72e4 !important;
 }
@@ -13111,6 +13122,15 @@ a.text-danger:focus {
 a.text-light:hover,
 a.text-light:focus {
   color: #919ca6 !important;
+}
+
+.text-gold {
+  color: #ffd700 !important;
+}
+
+a.text-gold:hover,
+a.text-gold:focus {
+  color: #f7e98e !important;
 }
 
 .text-dark {
@@ -13470,6 +13490,10 @@ button.bg-lighter:focus {
 
 .bg-gradient-primary {
   background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+}
+
+.bg-gradient-primary1 {
+  background: #ffd700 !important;
 }
 
 .bg-gradient-secondary {
@@ -14674,6 +14698,14 @@ a.text-white:focus {
   color: #e6e6e6 !important;
 }
 
+.text-maroon {
+  color: #800000 !important;
+}
+a.text-maroon:hover,
+a.text-maroon:focus {
+  color: #b22222 !important;
+}
+
 .text-gray {
   color: #8898aa !important;
 }
@@ -14693,7 +14725,7 @@ a.text-gray-dark:focus {
 }
 
 .text-light {
-  color: #ced4da !important;
+  color: #cb4154 !important;
 }
 
 a.text-light:hover,
@@ -20682,4 +20714,4 @@ pre>code.highlight {
   margin-left: 1rem;
 }
 
-/*# sourceMappingURL=dashboard-free.css.map */
+/*# sourceMappingURL=dashboard-free.css.map */*/*/*/
