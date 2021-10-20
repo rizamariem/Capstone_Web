@@ -13,6 +13,28 @@ from django.forms.utils import ErrorList
 from django.http import HttpResponse
 from .forms import LoginForm, SignUpForm
 
+from django.shortcuts import render
+from core.settings import EMAIL_HOST_USER
+from . import forms
+from django.core.mail import send_mail
+import random
+import string
+
+#otp = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(6))
+#def otp_generator(size=6, chars=string.ascii_uppercase + string.digits):
+#    return ''.join(random.choice(chars) for _ in range(size))
+
+def otp(size):
+        
+    # Takes random choices from
+    # ascii_letters and digits
+    generate_otp = ''.join([random.choice( string.ascii_uppercase +
+                                            string.ascii_lowercase +
+                                            string.digits)
+                                            for n in range(size)])                           
+    return generate_otp
+
+
 def login_view(request):
     form = LoginForm(request.POST or None)
 
@@ -49,7 +71,12 @@ def register_user(request):
 
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
-            
+            subject = 'EmoBot Email Confirmation' 
+            message = otp(6)
+            recepient = form.cleaned_data.get("email")
+            send_mail(subject, 
+            message, EMAIL_HOST_USER, [recepient], fail_silently = False)
+
             #return redirect("/login/")
 
         else:
