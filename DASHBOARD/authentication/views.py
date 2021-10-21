@@ -65,15 +65,16 @@ def register_user(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            username = form.cleaned_data.get("username")
-            raw_password = form.cleaned_data.get("password1")
+            username = request.POST.get("username")
+            raw_password = request.POST.get("password1")
             user = authenticate(username=username, password=raw_password)
+            # form = User(username=username, password=raw_password)
 
             msg     = 'User created - please <a href="/login">login</a>.'
             success = True
             subject = 'EmoBot Email Confirmation' 
             message = otp(6)
-            recepient = form.cleaned_data.get("email")
+            recepient = request.POST.get("email")
             send_mail(subject, 
             message, EMAIL_HOST_USER, [recepient], fail_silently = False)
 
